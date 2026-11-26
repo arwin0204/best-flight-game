@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Langit Nusantara: Sky Courier</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="game-wrap">
+  <canvas id="game-canvas" width="1280" height="720"></canvas>
+
+  <!-- Flight instruments: altitude, speed, heading, throttle, fuel, damage -->
+  <div id="hud-top-left" class="hud-panel">
+    <div class="hud-row"><span class="hud-label">ALT</span><span id="hud-alt" class="hud-value">0 m</span></div>
+    <div class="hud-row"><span class="hud-label">SPD</span><span id="hud-speed" class="hud-value">0 km/h</span></div>
+    <div class="hud-row"><span class="hud-label">HDG</span><span id="hud-heading" class="hud-value">000° N</span></div>
+    <div class="hud-row"><span class="hud-label">THR</span><span id="hud-throttle" class="hud-value">0%</span></div>
+    <div class="hud-bar-row"><div class="hud-bar"><div id="bar-throttle" class="hud-bar-fill throttle"></div></div></div>
+  </div>
+
+  <div id="hud-top-right" class="hud-panel">
+    <div class="hud-row"><span class="hud-label">FUEL</span><span id="hud-fuel" class="hud-value">100%</span></div>
+    <div class="hud-bar-row"><div class="hud-bar"><div id="bar-fuel" class="hud-bar-fill fuel"></div></div></div>
+    <div class="hud-row"><span class="hud-label">DMG</span><span id="hud-damage" class="hud-value">0%</span></div>
+    <div class="hud-bar-row"><div class="hud-bar"><div id="bar-damage" class="hud-bar-fill damage"></div></div></div>
+    <div class="hud-row"><span class="hud-label">SKOR</span><span id="hud-score" class="hud-value">0</span></div>
+    <div class="hud-row"><span class="hud-label">ANGIN</span><span id="hud-wind" class="hud-value">—</span></div>
+  </div>
+
+  <div id="hud-bottom" class="hud-panel">
+    <div id="hud-mission" class="hud-mission">Ring Run</div>
+    <div id="hud-objective" class="hud-objective">Pilih misi, lalu tekan ENTER</div>
+  </div>
+
+  <canvas id="hud-horizon" width="160" height="160" title="Artificial horizon"></canvas>
+  <div id="hud-message"></div>
+  <div id="hud-help">W/S pitch · A/D belok · Shift/Ctrl throttle · Spasi rem · P jeda · M suara · R ulang</div>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
